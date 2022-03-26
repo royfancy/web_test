@@ -1,0 +1,66 @@
+{% extends "Base.html" %} <!--繼承 Base.html-->
+
+{% block title %}
+      上傳圖片
+{% endblock %}
+
+
+{% block Content %}
+		
+		<div style="height: 150px"></div> <!--撐高!-->
+
+
+
+		<section class="text-center">
+			<div class="container">
+				<h1>圖片牆</h1>
+				<p class="lead text-muted">上傳你的圖片</p>
+			</div>				
+		</section>
+
+		<form action="" method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			<div class="form-row">
+				<div class="form-group col-md-4">
+				</div>
+				<div class="form-group col-md-4">
+					<input type="submit" class="btn btn-primary" value="上傳">
+				</div>
+				<div class="form-group col-md-4">
+				</div>
+			</div>
+
+			<!---->
+			<div class="form-row">
+				<div class="form-group col-md-4">
+				</div>
+				<div class="form-group col-md-4">
+					{{ form.image }} <!--與 model.py 的image相對應-->
+				</div>
+				<div class="form-group col-md-4">
+				</div>
+			</div>
+		</form>
+
+<p></p>
+ <div class="row">
+ 	{% for photo in photos %}
+
+ 		{% if photo.image %}
+	 		<div class="col-md-4">
+	 			<div class="card mb-4 shadow-sm">
+	 				<img src="{{ photo.image.url }}" class="card-img-top">
+	 			</div>
+	 		</div>
+	 	{% endif %}
+
+	 {% endfor %}
+ </div>
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "Base.html" %} <!--繼承-->
+
+{% block title %}
+      修改密碼
+{% endblock %}
+
+
+
+{% block Content %}
+ 
+ <!--================Breadcrumb Area =================-->
+     <!--   <section class="breadcrumb_area">
+            <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
+            <div class="container">
+                <div class="page-cover text-center">
+                    <h2 class="page-cover-tittle">會員專區</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active">Customer</li>
+                    </ol>
+                </div>
+            </div>
+        </section> -->
+        <!--================Breadcrumb Area =================-->
+<div style="clear:both;height: 150px;">         
+</div>
+
+    <div style="text-align: center">
+
+        <form action="" method="post">
+
+            {% csrf_token %}  <!--因為 method="post" 要補這句話-->
+
+           <!-- ID:<input type='text' name='cid' /><br> 
+                         修改網頁型態type='password' 這樣網頁密碼看不到     -->
+            修改的密碼:<input type='password' name='password' />
+            <p></p>
+
+            <input type='submit' value="修改" />
+        </form>
+    </div>
+
+{% endblock %}

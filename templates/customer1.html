@@ -1,0 +1,49 @@
+{% extends "Base.html" %} <!--繼承-->
+
+{% block title %}
+      會員註冊
+{% endblock %}
+
+
+{% block Content %}
+<!--================Breadcrumb Area =================-->
+        <section class="breadcrumb_area">
+            <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
+            <div class="container">
+                <div class="page-cover text-center">
+                    <h2 class="page-cover-tittle">會員專區</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active">Customer</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <!--================Breadcrumb Area =================-->
+
+		<form action="" method="post">
+
+			{% csrf_token %}
+
+		
+			姓名<input type="text"  name="username"/>
+			<p></p>
+			性別<input type="radio"  name="sex" checked value="M" />男生<input type="radio" name="sex" value="F" />女生
+				    <!-- checked 預設 -->
+			<p></p>
+			生日<input type="text" name="birthday" />
+			<p></p>
+			Email:<input type="Email" name="Email" />
+			<p></p>
+			電話:<input type="text" name="phone" />
+			<p></p>
+			地址:<input type="text" name="address" />
+			<p></p>
+			密碼:<input type="password" name="pwd" />
+			<p></p>
+			<input type="submit" value="註冊" />
+		</form>
+
+
+
+{% endblock %}

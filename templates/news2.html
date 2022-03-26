@@ -1,0 +1,30 @@
+<html>
+  <head> <!--網頁標題-->
+  	<meta charset="utf-8">
+  	<title>新聞</title>
+  </head>
+
+  <body> <!--網頁內容-->
+  	<h1>這是標題</h1>
+  	<h2>這是標題</h2>
+  	<h3>這是標題</h3>
+  	<h4>這是標題</h4>
+  	<h5>這是標題</h5>
+  	<h6>這是標題</h6>
+
+
+
+    <!--段落 要對應models.py中的資訊 -->
+    {% for n in news %}
+
+    標題:{{n.title}}<p></p>
+    內容:{{n.content}}<p></p>
+    發布日期:{{n.create_date}}<p></p>
+   
+    {% endfor %}
+  
+
+
+  </body>
+
+</html>

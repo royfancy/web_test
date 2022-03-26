@@ -1,0 +1,154 @@
+{% extends "Base.html" %} <!--繼承 Base.html-->
+
+{% block title %}
+      聯絡我們
+{% endblock %}
+
+{% block bannerArea %}
+
+     <!--================Breadcrumb Area =================-->
+        <section class="breadcrumb_area">
+            <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
+            <div class="container">
+                <div class="page-cover text-center">
+                    <h2 class="page-cover-tittle">聯絡我們</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active">Contact</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <!--================Breadcrumb Area =================-->
+
+
+{% endblock %}
+
+
+{% block Content %}
+         <!--================Contact Area =================-->
+        <section class="contact_area section_gap">
+
+            <!--崁入地圖-->
+            <iframe style="margin-bottom: 5%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.3542358394297!2d120.67765711534976!3d24.15930647894828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d7b4c1421dd%3A0x6ce491cd0080a491!2z5Lit5ZyL6Yar5a246Zmi5b6p5YGl5aSn5qiT!5e0!3m2!1szh-TW!2stw!4v1645791343483!5m2!1szh-TW!2stw" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <!--崁入地圖-->
+
+        <!--    
+
+                <div id="mapBox" class="mapBox" 
+                    data-lat="24.136941" 
+                    data-lon="120.685056" 
+                    data-zoom="13" 
+                    data-info="台中市中區建國路172號"
+                    data-mlat="24.136941"
+                    data-mlon="120.685056">
+                </div>
+         -->
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="contact_info">
+                            <div class="info_item">
+                                <i class="lnr lnr-home"></i>
+                                <h6>California, United States</h6>
+                                <p>Santa monica bullevard</p>
+                            </div>
+                            <div class="info_item">
+                                <i class="lnr lnr-phone-handset"></i>
+                                <h6><a href="#">00 (440) 9865 562</a></h6>
+                                <p>Mon to Fri 9am to 6 pm</p>
+                            </div>
+                            <div class="info_item">
+                                <i class="lnr lnr-envelope"></i>
+                                <h6><a href="#">support@colorlib.com</a></h6>
+                                <p>Send us your query anytime!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                        表單內容   與 contact view.py 相對應-->
+                    <div class="col-md-9">
+                        <form class="row contact_form" action="" method="post" id="contactForm" novalidate="novalidate">
+                            {% csrf_token %}  <!-- 記得補 -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-right">
+                                <button type="submit" value="submit" class="btn theme_btn button_hover">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================Contact Area =================-->
+       
+<!--               -->
+
+       <!--gmaps Js-->
+  <!--  <script src="/static/js/jquery-3.2.1.min.js"></script>
+        <script src="/static/js/popper.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+        <script src="/static/vendors/owl-carousel/owl.carousel.min.js"></script> 
+        <script src="/static/js/jquery.ajaxchimp.min.js"></script>
+        <script src="/static/vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>  
+        與Base.html 有相同的地方 刪除 -->
+        <script src="/static/vendors/nice-select/js/jquery.nice-select.js"></script>                       
+ <!--   <script src="/static/js/mail-script.js"></script>
+        <script src="/static/js/stellar.js"></script>   -->
+        <script src="/static/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="/static/vendors/isotope/isotope-min.js"></script>
+        <script src="/static/js/stellar.js"></script>
+        <script src="/static/vendors/lightbox/simpleLightbox.min.js"></script>
+        <!--gmaps Js-->   <!--  google key-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2ySUY2sk5qg-AaBordbxUc8Ybsi9og5o"></script>
+
+        <script src="/static/js/gmaps.min.js"></script>
+        <!-- contact js -->
+        <script src="/static/js/jquery.form.js"></script>
+        <script src="/static/js/jquery.validate.min.js"></script>
+        <script src="/static/js/contact.js"></script>
+ <!--   <script src="/static/js/custom.js"></script>  與Base.html 有相同的地方 刪除--> 
+
+        
+        
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

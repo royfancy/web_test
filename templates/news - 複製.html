@@ -1,0 +1,43 @@
+<html>
+  <head> <!--網頁標題-->
+  	<meta charset="utf-8">
+  	<title>新聞</title>
+  </head>
+
+  <body> <!--網頁內容-->
+  	<h1>這是標題</h1>
+  	<h2>這是標題</h2>
+  	<h3>這是標題</h3>
+  	<h4>這是標題</h4>
+  	<h5>這是標題</h5>
+  	<h6>這是標題</h6>
+
+  	<!--變數-->
+  	<p> {{display_time}} </p>
+
+  	<p> {{score}} <p>
+ 	
+ 	<p> {{score.1}} <p>
+
+ 	<p> {{score.3}} {{score.2}} <p>
+
+     <!-- for 迴圈 -->
+ 	{% for i in score %}
+
+ 		<p>{{i}}
+
+ 	{% endfor %}
+
+
+ 	{% for item in ubike %}
+
+ 		<p> {{item }} 
+
+ 	{% endfor %}
+
+
+
+
+  </body>
+
+</html>
